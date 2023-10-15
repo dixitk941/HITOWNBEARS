@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Your Website</title>
+    <style>
+        /* Add CSS style to left-align the text within the <pre> element */
+        .left-align {
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-  <center></cenete><header>HITOWNBEARS</header></center>
+
+<header >
+    <center>HITOWNBEARS</center>
+    <nav>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="hero">
+    <h1>Welcome to Our Website</h1>
+    <p>Your source for all things wonderful.</p>
+    <a href="./services.html" class="btn">Learn More</a>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <div class="left-align">
+        <pre>HITOWNBEARS(fashion with comfort) Brand was incorporated by Aakash Dixit in year 2021 with a career in denim . He took jeans from work wear and made them fashionable with comfort.
     
+        The Perfect Fit philosophy guides Hitowbears Jeans in designing the jeans that perfectly fit the lifestyles, body types and quality expectations of its customers. The Focus for jeans is Premium quality. Our raw material, procured from Ramond  Limited .</pre>
+    </div>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Service 1</li>
+        <li>Service 2</li>
+        <li>Service 3</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Feel free to get in touch with us:</p>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+
+
+<footer>
+    <p>&copy; 2023 dixitk941. All rights reserved.</p>
+</footer>
+
 </body>
-</html>>
+</html>
