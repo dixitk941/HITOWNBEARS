@@ -4,38 +4,91 @@
     <meta charset="UTF-8">
     <title>Your Website</title>
     <style>
-        /* Add CSS style to left-align the text within the <pre> element */
+        /* Add your CSS styles here */
+        .about-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
         .left-align {
             text-align: left;
+        }
+        .photo {
+            margin-left: 20px; 
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black; 
+            color: white;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav li {
+            margin-right: 20px;
+        }
+        .nav a {
+            text-decoration: none;
+        }
+
+        .logo {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
         }
     </style>
 </head>
 <body>
 
-<header >
-    <center>HITOWNBEARS</center>
-    <nav>
-        <ul>
-            <li><a href="./home.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./services.html">Services</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="header">
+        <center><h1>HITOWNBEARS</h1></center>
+        <div class="logo">
+            <img src="./Hitownbears.jpg" alt="Your Logo" width="100" height="100">
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <div class="slideshow-container">
+        <div class="mySlides">
+           <center> <img class="slide" src="./Hitownbears image.jpg" alt="Slide 1" width="500" height="500"></center>
+        </div>
+    </div>
 <section id="hero">
     <h1>Welcome to Our Website</h1>
     <p>Your source for all things wonderful.</p>
     <a href="./services.html" class="btn">Learn More</a>
 </section>
 
-<section id="about">
-    <h2>About Us</h2>
+<section id="about" class="about-section">
     <div class="left-align">
-        <pre>HITOWNBEARS(fashion with comfort) Brand was incorporated by Aakash Dixit in year 2021 with a career in denim . He took jeans from work wear and made them fashionable with comfort.
-    
-        The Perfect Fit philosophy guides Hitowbears Jeans in designing the jeans that perfectly fit the lifestyles, body types and quality expectations of its customers. The Focus for jeans is Premium quality. Our raw material, procured from Ramond  Limited .</pre>
+        <h2>About Us</h2>
+        <p aria-flowto="left-align">HITOWNBEARS(fashion with comfort) Brand was incorporated by Aakash Dixit in the year 2021 with a career in denim. He took jeans from workwear and made them fashionable with comfort.</p><br>
+
+<p>The Perfect Fit philosophy guides Hitownbears Jeans in designing the jeans that perfectly fit the lifestyles, body types, and quality expectations of its customers. The focus for jeans is premium quality. Our raw material, procured from Raymond Limited.</p>
+    </div>
+
+    <div class="photo" data-wow-delay="0.01s">
+        <a href="./Hitownbears image.jpg"><img src="./Hitownbears image.jpg" alt="A sample image" width="300" height="200" title="Click to enlarge"></a>
     </div>
 </section>
 
@@ -62,9 +115,7 @@
     </form>
 </section>
 
-
-
-<footer>
+<footer class="footer">
     <p>&copy; 2023 dixitk941. All rights reserved.</p>
 </footer>
 
