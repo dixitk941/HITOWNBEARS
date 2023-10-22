@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        
+        /* Add your CSS styles here */
+
         body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
         }
-
 
         .burger-icon {
             display: none;
@@ -58,8 +56,6 @@
             }
         }
 
-
-        
         .header {
             background-color: black;
             color: white;
@@ -90,7 +86,6 @@
             color: white;
         }
 
-       
         .slideshow-container {
             max-width: 100%;
             overflow: hidden;
@@ -105,7 +100,6 @@
             height: auto;
         }
 
-        
         #hero {
             background-color: #333;
             text-align: center;
@@ -120,7 +114,6 @@
         #hero p {
             font-size: 18px;
         }
-
 
         .about-section {
             display: flex;
@@ -168,7 +161,6 @@
             font-size: 24px;
         }
 
-        
         #services {
             background-color: #333;
             text-align: center;
@@ -189,7 +181,6 @@
             margin-bottom: 10px;
         }
 
-        
         #contact {
             background-color: #333;
             text-align: center;
@@ -228,7 +219,6 @@
             cursor: pointer;
         }
 
-        
         .footer {
             background-color: black;
             color: white;
@@ -239,7 +229,6 @@
 
     </style>
 </head>
-
 <body>
 
     <header class="header">
@@ -264,10 +253,6 @@
         </nav>
     </header>
 
-
-
-
-
     <div class="slideshow-container">
         <div class="mySlides">
             <img src="./Hitownbears image.jpg" alt="Slide 1">
@@ -290,12 +275,11 @@
         </div>
     </section>
     
-
     <section id="services">
         <h2>Our Services</h2>
         <ul>
             <li>Retail</li>
-            <li>wholesale</li>
+            <li>Wholesale</li>
         </ul>
     </section>
 
@@ -313,26 +297,23 @@
         </form>
     </section>
 
-
-<footer class="footer">
-    <p>&copy; 2023 dixitk941. All rights reserved. Follow us on:</p>
-    <ul class="footer-links">
-        <li><a href="https://www.youtube.com/@Dixitgarments" target="_blank">YouTube</a></li>
-        <li><a href="https://www.instagram.com/hitownbearsofficial" target="_blank">Instagram</a></li>
-    </ul>
+    <footer class="footer">
+        <p>&copy; 2023 dixitk941. All rights reserved. Follow us on:</p>
+        <ul class="footer-links">
+            <li><a href="https://www.youtube.com/@Dixitgarments" target="_blank">YouTube</a></li>
+            <li><a href="https://www.instagram.com/hitownbearsofficial" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
 
     <script>
-         const burgerIcon = document.querySelector(".burger-icon");
+        // JavaScript for the burger menu
+        const burgerIcon = document.querySelector(".burger-icon");
         const nav = document.querySelector(".nav");
 
         burgerIcon.addEventListener("click", () => {
             burgerIcon.classList.toggle("active");
             nav.classList.toggle("active");
         });
-        
     </script>
-
 </body>
-
 </html>
-
