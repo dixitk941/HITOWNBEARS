@@ -52,10 +52,9 @@
         }
 
         /* Add a responsive burger menu for small screens */
-        .burger-icon {
-            display: none;
-            cursor: pointer;
-            z-index: 2;
+         .burger-icon {
+            display: flex; /* Make it initially visible on all screens */
+            flex-direction: column; /* Display the bars in a column */
         }
 
         .burger-icon div {
@@ -63,6 +62,44 @@
             height: 3px;
             background-color: white;
             margin: 6px 0;
+        }
+
+        @media (max-width: 768px) {
+            /* Hide the navigation links on smaller screens */
+            .nav {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                background: black;
+                width: 100%;
+                z-index: 1;
+                text-align: center;
+            }
+
+            /* Show the navigation when the burger icon is active */
+            .nav.active {
+                display: flex;
+            }
+
+            /* Add styles to transform burger icon into an "X" shape */
+            .burger-icon.active div:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .burger-icon.active div:nth-child(2) {
+                opacity: 0;
+            }
+
+            .burger-icon.active div:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
+            /* Adjust positioning when navigation is active */
+            .nav.active {
+                top: 60px; /* You may need to adjust this to your desired position */
+            }
         }
 
         @media (max-width: 768px) {
@@ -239,7 +276,7 @@
     </style>
 </head>
 <body>
-    <header class="header">
+ <header class="header">
         <div class="burger-icon">
             <div class="bar bar1"></div>
             <div class="bar bar2"></div>
@@ -318,7 +355,6 @@
     </footer>
 
     <script>
-        // JavaScript for the burger menu
         const burgerIcon = document.querySelector(".burger-icon");
         const nav = document.querySelector(".nav");
 
