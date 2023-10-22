@@ -384,15 +384,16 @@
         </ul>
     </footer>
 
-    <script>
-        // JavaScript for the burger menu
-        const burgerIcon = document.querySelector(".burger-icon");
-        const nav = document.querySelector(".nav");
+  <script>
+    // JavaScript for the burger menu
+    const burgerIcon = document.querySelector(".burger-icon");
+    const bars = document.querySelectorAll(".bar");
 
-        burgerIcon.addEventListener("click", () => {
-            burgerIcon.classList.toggle("active");
-            nav.classList.toggle("active");
-        });
-    </script>
+    burgerIcon.addEventListener("click", () => {
+        burgerIcon.classList.toggle("active");
+        bars.forEach(bar => bar.classList.toggle("active"));
+    });
+</script>
+
 </body>
 </html>
