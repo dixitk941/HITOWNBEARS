@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>About</title>
- <link rel="stylesheet" href="style.css">
-
- <style>
-body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
         }
 
-        
         .header {
             background-color: black;
             color: white;
@@ -45,26 +43,23 @@ body {
         }
 
         .about-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 0;
+            padding: 20px;
+            text-align: center;
         }
 
         .about-content {
-            max-width: 1200px;
-            text-align: center;
+            max-width: 100%;
         }
 
         .about-paragraphs {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
             margin-top: 20px;
         }
 
         .left-paragraph, .right-paragraph {
-            flex: 1;
+            max-width: 100%;
             padding: 20px;
             transition: transform 0.3s ease;
         }
@@ -73,34 +68,17 @@ body {
             transform: scale(1.05);
         }
 
-                .about-section {
-                    display: flex;
-                    justify-content: space-between;
-                }
+        .about-section h2 {
+            font-size: 24px;
+        }
 
-                .about-section .left-align {
-                    text-align: left;
-                }
-
-                .about-section .text {
-                    text-align: right;
-                }
-
-                .about-section h2 {
-                    font-size: 24px;
-                }
-
-                .footer {
-                    background-color: black;
-                    color: white;
-                    text-align: center;
-                    padding: 10px 0;
-                }
-
-                
-
-
- </style>
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
 
@@ -126,25 +104,27 @@ body {
         </nav>
     </header>
 
-
     <section id="about" class="about-section">
         <div class="about-content">
             <h2>About Us</h2>
             <div class="about-paragraphs">
-                <p class="left-paragraph"><strong>HITOWNBEARS (fashion with comfort) Brand was incorporated by Aakash Dixit in the year 2021 with a career in denim. He took jeans from workwear and made them fashionable with comfort.</strong></p>
-                <p class="right-paragraph">The Perfect Fit philosophy guides Hitownbears Jeans in designing the jeans that perfectly fit the lifestyles, body types, and quality expectations of its customers. The focus for jeans is premium quality. Our raw material, procured from Raymond Limited.</p>
+                <div class="left-paragraph">
+                    <strong>HITOWNBEARS (fashion with comfort) Brand was incorporated by Aakash Dixit in the year 2021 with a career in denim. He took jeans from workwear and made them fashionable with comfort.</strong>
+                </div>
+                <div class="right-paragraph">
+                    The Perfect Fit philosophy guides Hitownbears Jeans in designing the jeans that perfectly fit the lifestyles, body types, and quality expectations of its customers. The focus for jeans is premium quality. Our raw material is procured from Raymond Limited.
+                </div>
             </div>
         </div>
     </section>
 
-<footer class="footer">
-    <p>&copy; 2023 dixitk941. All rights reserved. Follow us on:</p>
-    <ul class="footer-links">
-        <li><a href="https://www.youtube.com/@Dixitgarments" target="_blank">YouTube</a></li>
-        <li><a href="https://www.instagram.com/hitownbearsofficial" target="_blank">Instagram</a></li>
-    </ul>
-</footer>
+    <footer class="footer">
+        <p>&copy; 2023 dixitk941. All rights reserved. Follow us on:</p>
+        <ul class="footer-links">
+            <li><a href="https://www.youtube.com/@Dixitgarments" target="_blank">YouTube</a></li>
+            <li><a href="https://www.instagram.com/hitownbearsofficial" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
 
- 
 </body>
 </html>
