@@ -12,6 +12,51 @@
             font-family: Arial, sans-serif;
         }
 
+
+        .burger-icon {
+            display: none;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .burger-icon div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 6px 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                background: black;
+                width: 100%;
+                z-index: 1;
+                text-align: center;
+            }
+
+            .nav.active {
+                display: flex;
+            }
+
+            .burger-icon.active .bar1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .burger-icon.active .bar2 {
+                opacity: 0;
+            }
+
+            .burger-icon.active .bar3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+
+
         
         .header {
             background-color: black;
@@ -75,34 +120,34 @@
         }
 
 
-.about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0;
-}
+        .about-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
 
-.about-content {
-    max-width: 1200px;
-    text-align: center;
-}
+        .about-content {
+            max-width: 1200px;
+            text-align: center;
+        }
 
-.about-paragraphs {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
-}
+        .about-paragraphs {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
 
-.left-paragraph, .right-paragraph {
-    flex: 1;
-    padding: 20px;
-    transition: transform 0.3s ease;
-}
+        .left-paragraph, .right-paragraph {
+            flex: 1;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
 
-.left-paragraph:hover, .right-paragraph:hover {
-    transform: scale(1.05);
-}
+        .left-paragraph:hover, .right-paragraph:hover {
+            transform: scale(1.05);
+        }
 
         .about-section {
             display: flex;
@@ -196,8 +241,15 @@
 <body>
 
     <header class="header">
+        <div class="burger-icon">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </div>
         <div class="logo">
-            <img src="./Hitownbears.jpg" alt="Your Logo">
+            <a href="./home.html">
+                <img src="./Hitownbears.jpg" alt="Your Logo">
+            </a>
         </div>
         <nav class="nav">
             <ul>
@@ -208,6 +260,10 @@
             </ul>
         </nav>
     </header>
+
+
+
+
 
     <div class="slideshow-container">
         <div class="mySlides">
@@ -263,6 +319,13 @@
     </ul>
 
     <script>
+         const burgerIcon = document.querySelector(".burger-icon");
+        const nav = document.querySelector(".nav");
+
+        burgerIcon.addEventListener("click", () => {
+            burgerIcon.classList.toggle("active");
+            nav.classList.toggle("active");
+        });
         
     </script>
 
