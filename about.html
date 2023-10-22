@@ -28,6 +28,11 @@
             height: 100px;
         }
 
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
         .nav ul {
             list-style: none;
             display: flex;
@@ -40,6 +45,53 @@
         .nav a {
             text-decoration: none;
             color: white;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .burger-icon {
+            display: none;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .burger-icon div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 6px 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                background: black;
+                width: 100%;
+                z-index: 1;
+                text-align: center;
+            }
+
+            .nav.active {
+                display: flex;
+            }
+
+            .burger-icon.active .bar1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .burger-icon.active .bar2 {
+                opacity: 0;
+            }
+
+            .burger-icon.active .bar3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
         }
 
         .about-section {
@@ -126,5 +178,14 @@
             <li><a href="https://www.instagram.com/hitownbearsofficial" target="_blank">Instagram</a></li>
         </ul>
     </footer>
+    <script>
+        const burgerIcon = document.querySelector(".burger-icon");
+        const nav = document.querySelector(".nav");
+        
+        burgerIcon.addEventListener("click", () => {
+            burgerIcon.classList.toggle("active");
+            nav.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
