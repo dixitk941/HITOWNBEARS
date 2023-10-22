@@ -1,18 +1,57 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hitownbears</title>
     <style>
-        
-        body {
+        /* Reset some default styles */
+        * {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            box-sizing: border-box;
         }
 
+        /* Global styles for the body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Light gray background */
+        }
 
+        /* Navigation bar styles */
+        .header {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            border-radius: 50%;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+        }
+
+        .nav {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            margin-right: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Add a responsive burger menu for small screens */
         .burger-icon {
             display: none;
             cursor: pointer;
@@ -56,39 +95,7 @@
             }
         }
 
-
-        
-        .header {
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-
-        .logo img {
-            border-radius: 50%;
-            overflow: hidden;
-            width: 100px;
-            height: 100px;
-        }
-
-        .nav ul {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav li {
-            margin-right: 20px;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: white;
-        }
-
-       
+        /* Slideshow container styles */
         .slideshow-container {
             max-width: 100%;
             overflow: hidden;
@@ -103,7 +110,7 @@
             height: auto;
         }
 
-        
+        /* Hero section styles */
         #hero {
             background-color: #333;
             text-align: center;
@@ -119,7 +126,7 @@
             font-size: 18px;
         }
 
-
+        /* About section styles */
         .about-section {
             display: flex;
             justify-content: center;
@@ -143,30 +150,16 @@
             flex: 1;
             padding: 20px;
             transition: transform 0.3s ease;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         .left-paragraph:hover, .right-paragraph:hover {
             transform: scale(1.05);
         }
 
-        .about-section {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .about-section .left-align {
-            text-align: left;
-        }
-
-        .about-section .text {
-            text-align: right;
-        }
-
-        .about-section h2 {
-            font-size: 24px;
-        }
-
-        
+        /* Services section styles */
         #services {
             background-color: #333;
             text-align: center;
@@ -187,7 +180,7 @@
             margin-bottom: 10px;
         }
 
-        
+        /* Contact section styles */
         #contact {
             background-color: #333;
             text-align: center;
@@ -202,6 +195,10 @@
         #contact form {
             max-width: 400px;
             margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
         #contact label {
@@ -217,16 +214,21 @@
             padding: 10px;
             margin-top: 10px;
             font-size: 16px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        #contact textarea {
+            height: 120px;
         }
 
         #contact button {
             background-color: #009688;
             color: white;
-            border: none;
             cursor: pointer;
         }
 
-        
+        /* Footer styles */
         .footer {
             background-color: black;
             color: white;
@@ -234,12 +236,9 @@
             padding: 10px 0;
             display: flex;
         }
-
     </style>
 </head>
-
 <body>
-
     <header class="header">
         <div class="burger-icon">
             <div class="bar bar1"></div>
@@ -247,13 +246,13 @@
             <div class="bar bar3"></div>
         </div>
         <div class="logo">
-            <a href="./index.html">
+            <a href="./home.html">
                 <img src="./Hitownbears.jpg" alt="Your Logo">
             </a>
         </div>
         <nav class="nav">
             <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="./home.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./services.html">Services</a></li>
                 <li><a href="./contact.html">Contact</a></li>
@@ -261,10 +260,6 @@
             </ul>
         </nav>
     </header>
-
-
-
-
 
     <div class="slideshow-container">
         <div class="mySlides">
@@ -282,18 +277,21 @@
         <div class="about-content">
             <h2>About Us</h2>
             <div class="about-paragraphs">
-                <p class="left-paragraph"><strong>HITOWNBEARS (fashion with comfort) Brand was incorporated by Aakash Dixit in the year 2021 with a career in denim. He took jeans from workwear and made them fashionable with comfort.</strong></p>
-                <p class="right-paragraph">The Perfect Fit philosophy guides Hitownbears Jeans in designing the jeans that perfectly fit the lifestyles, body types, and quality expectations of its customers. The focus for jeans is premium quality. Our raw material, procured from Raymond Limited.</p>
+                <div class="left-paragraph">
+                    <strong>HITOWNBEARS (fashion with comfort) Brand was incorporated by Aakash Dixit in the year 2021 with a career in denim. He took jeans from workwear and made them fashionable with comfort.</strong>
+                </div>
+                <div class="right-paragraph">
+                    The Perfect Fit philosophy guides Hitownbears Jeans in designing the jeans that perfectly fit the lifestyles, body types, and quality expectations of its customers. The focus for jeans is premium quality. Our raw material, procured from Raymond Limited.
+                </div>
             </div>
         </div>
     </section>
-    
 
     <section id="services">
         <h2>Our Services</h2>
         <ul>
             <li>Retail</li>
-            <li>wholesale</li>
+            <li>Wholesale</li>
         </ul>
     </section>
 
@@ -311,26 +309,23 @@
         </form>
     </section>
 
-
-<footer class="footer">
-    <p>&copy; 2023 dixitk941. All rights reserved. Follow us on:</p>
-    <ul class="footer-links">
-        <li><a href="https://www.youtube.com/@Dixitgarments" target="_blank">YouTube</a></li>
-        <li><a href="https://www.instagram.com/hitownbearsofficial" target="_blank">Instagram</a></li>
-    </ul>
+    <footer class="footer">
+        <p>&copy; 2023 dixitk941. All rights reserved. Follow us on:</p>
+        <ul class="footer-links">
+            <li><a href="https://www.youtube.com/@Dixitgarments" target="_blank">YouTube</a></li>
+            <li><a href="https://www.instagram.com/hitownbearsofficial" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
 
     <script>
-         const burgerIcon = document.querySelector(".burger-icon");
+        // JavaScript for the burger menu
+        const burgerIcon = document.querySelector(".burger-icon");
         const nav = document.querySelector(".nav");
 
         burgerIcon.addEventListener("click", () => {
             burgerIcon.classList.toggle("active");
             nav.classList.toggle("active");
         });
-        
     </script>
-
 </body>
-
 </html>
-
