@@ -95,8 +95,45 @@
             }
         }
 
-        /* Other styles remain unchanged from your previous code */
-        /* ... */
+.about-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .about-paragraphs {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .left-paragraph, .right-paragraph {
+            flex: 1;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-paragraph:hover, .right-paragraph:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            display: flex;
+        }
     </style>
 </head>
 <body>
