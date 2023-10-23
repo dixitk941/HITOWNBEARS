@@ -19,116 +19,64 @@
         }
 
         /* Navigation bar styles */
-        .header {
-            background-color: black;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
 
-        .logo img {
-            border-radius: 50%;
-            overflow: hidden;
-            width: 100px;
-            height: 100px;
-        }
+.logo {
+  flex: 1;
+  text-align: center;
+}
 
-        .nav {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
+.logo img {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
 
-        .nav li {
-            margin-right: 20px;
-        }
+.hamburger {
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
 
-        .nav a {
-            text-decoration: none;
-            color: white;
-        }
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  margin-bottom: 4px;
+}
 
-        /* Add a responsive burger menu for small screens */
-         .burger-icon {
-            display: flex; /* Make it initially visible on all screens */
-            flex-direction: column; /* Display the bars in a column */
-        }
+.hamburger ul {
+  display: none;
+}
 
-        .burger-icon div {
-            width: 30px;
-            height: 3px;
-            background-color: white;
-            margin: 6px 0;
-        }
+.hamburger:hover ul {
+  display: block;
+}
 
-        @media (max-width: 768px) {
-            /* Hide the navigation links on smaller screens */
-            .nav {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                position: absolute;
-                top: 60px;
-                background: black;
-                width: 100%;
-                z-index: 1;
-                text-align: center;
-            }
+.hamburger ul li {
+  list-style: none;
+}
 
-            /* Show the navigation when the burger icon is active */
-            .nav.active {
-                display: flex;
-            }
+.hamburger ul li a {
+  text-decoration: none;
+}
 
-            /* Add styles to transform burger icon into an "X" shape */
-            .burger-icon.active div:nth-child(1) {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
+.home-link, .login-link {
+  margin-left: 10px;
+}
 
-            .burger-icon.active div:nth-child(2) {
-                opacity: 0;
-            }
-
-            .burger-icon.active div:nth-child(3) {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-
-            /* Adjust positioning when navigation is active */
-            .nav.active {
-                top: 60px; /* You may need to adjust this to your desired position */
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                position: absolute;
-                top: 60px;
-                background: black;
-                width: 100%;
-                z-index: 1;
-                text-align: center;
-            }
-
-            .nav.active {
-                display: flex;
-            }
-
-            .burger-icon.active .bar1 {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
-
-            .burger-icon.active .bar2 {
-                opacity: 0;
-            }
-
-            .burger-icon.active .bar3 {
-                transform: rotate(45deg) translate(-5px, -6px);
+.home-link a, .login-link a {
+  color: black;
+  text-decoration: none;
+}                transform: rotate(45deg) translate(-5px, -6px);
             }
         }
 
@@ -277,26 +225,28 @@
 </head>
 <body>
  <header class="header">
-        <div class="burger-icon">
-            <div class="bar bar1"></div>
-            <div class="bar bar2"></div>
-            <div class="bar bar3"></div>
+        <div class="header">
+        <div class="home-link">
+          <a href="index.html">Home</a>
         </div>
         <div class="logo">
-            <a href="./home.html">
-                <img src="./Hitownbears.jpg" alt="Your Logo">
-            </a>
+          <img src="./Hitownbears.jpg" alt="Logo">
         </div>
-        <nav class="nav">
-            <ul>
-                <li><a href="./home.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./services.html">Services</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./login.html">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="login-link">
+          <a href="login.html">Login</a>
+        </div>
+      </div>
 
     <div class="slideshow-container">
         <div class="mySlides">
