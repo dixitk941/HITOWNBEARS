@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="burger-icon">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </div>
+        <div class="logo">
+            <a href="./home.html">
+                <img src="./logo.png" alt="Your Logo">
+            </a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./shopnow.html">shopnow</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <center><h1>shop</h1></center>
+        <div class="shopnow" id="shop">
+            <table>
+                <tr>
+            <td><a href="https://fktr.in/dkk6v2U" target="_blank" >        
+            <img src="./product/main.png" alt="flipkart_jeans" height="500px"></td>
+            <td><a href="https://fktr.in/dkk6v2U" target="_blank"></a></td>
+           <td><a href="https://fktr.in/dkk6v2U" target="_blank">
+            <img src="./product/main.png" alt="flipkart_jeans" height="500px"></td>
+           </tr>
+            </table>
+            <p style="color: black;border: 1;"><a href="https://fktr.in/dkk6v2U" target="_blank">Shop on Flipkart</a></p>
+        </div>
+    </section>
+
+
+    
+
+    <footer class="footer">
+        <p>&copy; 2023 dixitk941. All rights reserved. Follow us on:</p>
+        <ul class="footer-links">
+            <li><a href="https://www.youtube.com/@Dixitgarments" target="_blank">YouTube</a></li>
+            <li><a href="https://www.instagram.com/hitownbearsofficial" target="_blank">Instagram</a></li>
+            
+        </ul>
+    </footer>
+
+  <script>
+    const burgerIcon = document.querySelector(".burger-icon");
+    const bars = document.querySelectorAll(".bar");
+    const nav = document.querySelector(".nav"); // Select the navigation element
+ 
+    burgerIcon.addEventListener("click", () => { 
+    burgerIcon.classList.toggle("active");
+    bars.forEach(bar => bar.classList.toggle("active"));
+    nav.classList.toggle("active"); // Toggle the "active" class on the navigation element
+    });
+
+
+
+</script>
+
+
+    
+    
+</body>
+</html>
