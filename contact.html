@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css">
+    
 </head>
 <body>
     <header class="header">
@@ -25,6 +26,7 @@
                 <li><a href="./services.html">Services</a></li>
                 <li><a href="./contact.html">Contact</a></li>
                 <li><a href="./login.html">Login</a></li>
+                <li><a href="./shopnow.html">shopnow</a></li>
             </ul>
         </nav>
     </header>
@@ -53,12 +55,15 @@
 
     <script>
         const burgerIcon = document.querySelector(".burger-icon");
-        const nav = document.querySelector(".nav");
+        const bars = document.querySelectorAll(".bar");
+        const nav = document.querySelector(".nav"); // Select the navigation element
+ 
+        burgerIcon.addEventListener("click", () => { 
+        burgerIcon.classList.toggle("active");
+        bars.forEach(bar => bar.classList.toggle("active"));
+        nav.classList.toggle("active"); // Toggle the "active" class on the navigation element
+    });
 
-        burgerIcon.addEventListener("click", () => {
-            burgerIcon.classList.toggle("active");
-            nav.classList.toggle("active");
-        });
     </script>
 </body>
 </html>
