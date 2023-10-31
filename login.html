@@ -4,60 +4,45 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
 
-        .login-container {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            padding: 20px;
-        }
-
-        h2 {
-            font-size: 24px;
-        }
-
-        .login-options {
-            margin-top: 20px;
-        }
-
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            margin: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        #otp-verification {
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./index.css">
+   
+        
+</head>
+<body>
+    <header class="header">
+        <div class="burger-icon">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+        </div>
+        <div class="logo">
+            <a href="./home.html">
+                <img src="./logo.png" alt="Your Logo">
+            </a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./login.html">Login</a></li>
+                <li><a href="./shopnow.html">shopnow</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="login-container">
         <h2>Login</h2>
         <div class="login-options">
@@ -77,6 +62,15 @@
             <button id="otp-verify">Verify OTP</button>
         </div>
     </div>
+     <footer class="footer">
+        <p>&copy; 2023 dixitk941. All rights reserved. Follow us on:</p>
+        <ul class="footer-links">
+            <li><a href="https://www.youtube.com/@Dixitgarments" target="_blank">YouTube</a></li>
+            <li><a href="https://www.instagram.com/hitownbearsofficial" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
+
+
     <script src="Login.js"></script>
 </body>
 </html>
