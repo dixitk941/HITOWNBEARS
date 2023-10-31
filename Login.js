@@ -24,3 +24,12 @@ document.getElementById("otp-verify").addEventListener("click", function() {
     // Verify the OTP with your backend.
     // If successful, allow access to the application.
 });
+    const burgerIcon = document.querySelector(".burger-icon");
+    const bars = document.querySelectorAll(".bar");
+    const nav = document.querySelector(".nav"); // Select the navigation element
+ 
+    burgerIcon.addEventListener("click", () => { 
+    burgerIcon.classList.toggle("active");
+    bars.forEach(bar => bar.classList.toggle("active"));
+    nav.classList.toggle("active"); // Toggle the "active" class on the navigation element
+    });
