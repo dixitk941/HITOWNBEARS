@@ -1,0 +1,23 @@
+<!-- public/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HiTown Bears Shop</title>
+</head>
+<body>
+  <h1>HiTown Bears Shop</h1>
+  <form action="/charge" method="post">
+    <label for="amount">Amount (in cents): </label>
+    <input type="number" name="amount" required><br>
+    <label for="currency">Currency: </label>
+    <input type="text" name="currency" value="usd" required><br>
+    <label for="source">Card Number: </label>
+    <input type="text" name="source" required><br>
+    <label for="description">Description: </label>
+    <input type="text" name="description" required><br>
+    <button type="submit">Pay Now</button>
+  </form>
+</body>
+</html>
